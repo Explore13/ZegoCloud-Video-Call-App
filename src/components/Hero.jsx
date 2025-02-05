@@ -17,10 +17,10 @@ function Hero() {
   const [input, setInput] = useState("");
 
   const submitHandler = () => {
-    if (input) {
-      window.location.href = `/room/${input}`;
+    if (!input) {
+      window.location.href = `/room/${randomID(5)}`;
     }
-    window.location.href = `/room/${randomID(5)}`;
+    window.location.href = `/room/${input}`;
   };
   return (
     <div className="bg-gray-50">
